@@ -1,4 +1,4 @@
-package com.vholovetskyi.shop.product.model.repository;
+package com.vholovetskyi.shop.product.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import com.vholovetskyi.shop.product.model.Product;
