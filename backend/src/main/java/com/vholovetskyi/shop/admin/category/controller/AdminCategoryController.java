@@ -1,4 +1,4 @@
-package com.vholovetskyi.shop.category.controller;
+package com.vholovetskyi.shop.admin.category.controller;
 
 import com.github.slugify.Slugify;
 import lombok.RequiredArgsConstructor;

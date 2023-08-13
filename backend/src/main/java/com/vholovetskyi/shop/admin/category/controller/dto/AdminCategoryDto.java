@@ -1,4 +1,4 @@
-package com.vholovetskyi.shop.category.controller.dto;
+package com.vholovetskyi.shop.admin.category.controller.dto;
 
 import lombok.Getter;
 import org.hibernate.validator.constraints.Length;

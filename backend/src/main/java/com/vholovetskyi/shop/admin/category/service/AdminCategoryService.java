@@ -1,4 +1,4 @@
-package com.vholovetskyi.shop.category.service;
+package com.vholovetskyi.shop.admin.category.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
