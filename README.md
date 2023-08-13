@@ -2,18 +2,18 @@
 
 * [General info](#general-info)
 * [Requirement](#requirements)
-* [Use Case](#use-case)
+* [API Documentation](#api-documentation)
 * [Technologies](#technologies)
 
 ## General info
 
-Online store for selling goods and managing goods
+Online store for the sale and management of goods
 
 ## Requirements
 
 #### Admin:
 
-> * admin can add, modify and delete products
+> * should be able to add, modify and delete products
 
 #### Client:
 
@@ -27,13 +27,13 @@ Online store for selling goods and managing goods
 
 #### UX/UI:
 
-> * product views should be divided into pages (use pagination)
-> 
-> * ## Use Case
+> * use pagination to view products
 
-| url                            | call method   | description                |
-| ------------------------------ | ------------- | -------------------------- |
-| http://localhost:8080/products | getProducts() | getting a list of products |
+## API Documentation:
+
+| Operation              | URL template  |
+| ---------------------- | ------------- |
+| Get a list of products | GET /products |
 
 ## Technologies
 
