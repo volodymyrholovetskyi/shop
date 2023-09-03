@@ -1,6 +1,12 @@
 package com.vholovetskyi.shop.admin.product.web;
 
 import com.github.slugify.Slugify;
+import com.vholovetskyi.shop.admin.product.model.AdminProduct;
+import com.vholovetskyi.shop.admin.product.service.AdminProductImageService;
+import com.vholovetskyi.shop.admin.product.service.AdminProductService;
+import com.vholovetskyi.shop.admin.product.web.dto.AdminProductDTO;
+import com.vholovetskyi.shop.admin.product.web.dto.UploadResponse;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
@@ -10,7 +16,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.validation.Valid;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -72,8 +77,6 @@ public class AdminProductController {
                 .body(file);
     }
 
-    // TODO 54 min
-
     private AdminProduct mapAdminProduct(AdminProductDTO productDTO, Long id) {
         return AdminProduct.builder()
                 .id(id)
@@ -82,7 +85,7 @@ public class AdminProductController {
                 .fullDescription(productDTO.getFullDescription())
                 .categoryId(productDTO.getCategoryId())
                 .price(productDTO.getPrice())
-                .currency(productDTO.getCurrency())
+//                .currency(productDTO.getCurrency())
                 .image(productDTO.getImage())
                 .slug(slugifySlug(productDTO.getSlug()))
                 .build();

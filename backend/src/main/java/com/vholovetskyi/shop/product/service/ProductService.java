@@ -1,11 +1,11 @@
 package com.vholovetskyi.shop.product.service;
 
+import com.vholovetskyi.shop.product.model.Product;
+import com.vholovetskyi.shop.product.repository.ProductRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import v.holovetskyi.shop.product.model.Product;
-import v.holovetskyi.shop.product.repository.ProductRepository;
 
 @Service
 @AllArgsConstructor

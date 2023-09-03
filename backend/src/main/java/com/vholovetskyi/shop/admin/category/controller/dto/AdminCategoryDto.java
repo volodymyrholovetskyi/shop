@@ -1,9 +1,8 @@
 package com.vholovetskyi.shop.admin.category.controller.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import org.hibernate.validator.constraints.Length;
-
-import javax.validation.constraints.NotBlank;
 
 @Getter
 public class AdminCategoryDto {

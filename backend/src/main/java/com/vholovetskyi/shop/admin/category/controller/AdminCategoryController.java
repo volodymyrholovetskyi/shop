@@ -1,11 +1,11 @@
 package com.vholovetskyi.shop.admin.category.controller;
 
 import com.github.slugify.Slugify;
+import com.vholovetskyi.shop.admin.category.controller.dto.AdminCategoryDto;
+import com.vholovetskyi.shop.admin.category.model.AdminCategory;
+import com.vholovetskyi.shop.admin.category.service.AdminCategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import v.holovetskyi.shop.admin.category.controller.dto.AdminCategoryDto;
-import v.holovetskyi.shop.admin.category.model.AdminCategory;
-import v.holovetskyi.shop.admin.category.service.AdminCategoryService;
 
 import java.util.List;
 

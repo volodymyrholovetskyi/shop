@@ -1,11 +1,10 @@
 package com.vholovetskyi.shop.admin.product.model;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity

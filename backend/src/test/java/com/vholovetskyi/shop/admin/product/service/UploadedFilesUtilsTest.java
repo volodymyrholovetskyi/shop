@@ -1,4 +1,4 @@
-package com.vholovetskyi.shop.service;
+package com.vholovetskyi.shop.admin.product.service;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;

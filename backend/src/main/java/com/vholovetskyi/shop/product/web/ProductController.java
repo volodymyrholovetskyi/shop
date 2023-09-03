@@ -1,5 +1,8 @@
 package com.vholovetskyi.shop.product.web;
 
+import com.vholovetskyi.shop.product.model.Product;
+import com.vholovetskyi.shop.product.service.ProductService;
+import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.data.domain.Page;
@@ -9,10 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import v.holovetskyi.shop.product.model.Product;
-import v.holovetskyi.shop.product.service.ProductService;
-
-import javax.validation.constraints.Pattern;
 
 @RestController
 @AllArgsConstructor

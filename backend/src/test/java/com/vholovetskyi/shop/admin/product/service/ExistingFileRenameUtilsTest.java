@@ -1,4 +1,4 @@
-package com.vholovetskyi.shop.service;
+package com.vholovetskyi.shop.admin.product.service;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
