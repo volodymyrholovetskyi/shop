@@ -1,6 +1,13 @@
+@use 'assets/styless/colours' as*;
+
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: 'Roboto', sans-serif;}
+
+  .content{
+    padding: 20px;
+    background: $lightgray;
+}
