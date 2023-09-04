@@ -1,4 +1,16 @@
+@use '../../../../assets/styless/colours' as *;
+
 :host {
-   background: #ddd; 
+   background: $darkgray; 
    padding: 20px;
+}
+
+.logo-text {
+   font-size: 22px;
+   color: white;
+}
+
+.logo-icon .shopping-basket{
+   font-size: 30px;
+
 }

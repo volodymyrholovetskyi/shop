@@ -1,4 +1,6 @@
+@use '../../../../assets/styless/colours' as *;
+
 :host {
-    background: #bbb; 
+    background: $lightgray; 
     padding: 20px;
  }
