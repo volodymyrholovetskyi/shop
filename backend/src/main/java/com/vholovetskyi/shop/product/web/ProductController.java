@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
+import java.util.List;
+
 @RestController
 @AllArgsConstructor
 @Validated
@@ -21,10 +24,16 @@ public class ProductController {
 
     private final ProductService productService;
 
-    @GetMapping()
-    Page<Product> getProducts(Pageable pageable) {
-        return productService.getProducts(pageable);
-    }
+//    @GetMapping()
+////    Page<Product> getProducts(Pageable pageable) {
+////        return productService.getProducts(pageable);
+////    }
+@GetMapping()
+List<Product> getProducts() {
+    return List.of(
+            new Product(1L, "New product 1", 1L, "Description product 1", "Full description product 1", new BigDecimal("12.99"), "Image", "product-1")
+    );
+}
 
     @GetMapping("/{slug}")
     public Product getProductBySlug(
