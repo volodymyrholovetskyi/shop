@@ -5,6 +5,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AdminComponent } from 'src/app/modules/admin/admin.component';
 import { FullpageadminComponent } from './fullpageadmin.component';
+import { MaterialModule } from 'src/app/shared/material.module';
 
 
 
@@ -13,7 +14,8 @@ import { FullpageadminComponent } from './fullpageadmin.component';
   imports: [
     CommonModule,
     RouterModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MaterialModule
   ]
 })
 export class FullpageadminModule { }
