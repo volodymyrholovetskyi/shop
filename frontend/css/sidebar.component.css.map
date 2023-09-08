@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/app/shared/components/sidebar/sidebar.component.scss","sidebar.component.css"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,aAAA;ACCJ","file":"sidebar.component.css"}
+{"version":3,"sources":["../src/app/shared/components/sidebar/sidebar.component.scss","../src/assets/styless/_colours.scss","sidebar.component.css"],"names":[],"mappings":"AAEA;EACI,mBCCQ;EDAR,aAAA;AEDJ","file":"sidebar.component.css"}

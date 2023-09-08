@@ -4,4 +4,8 @@
   width: 1200px;
   margin: 0 auto;
   height: 100%;
-}/*# sourceMappingURL=default.component.css.map */
+}
+
+.content {
+  padding: 20px;
+}/*# sourceMappingURL=fullpage.component.css.map */

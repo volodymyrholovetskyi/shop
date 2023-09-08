@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"product.component.css"}
+{"version":3,"sources":["../src/app/modules/product/product.component.scss","product.component.css","../src/assets/styless/_colours.scss"],"names":[],"mappings":"AAEA;EACI,aAAA;EACA,sBAAA;ACDJ;;ADIA;EACI,kBAAA;ACDJ;;ADIA;EACI,eAAA;EACA,gBAAA;EACA,gBAAA;EACA,cEbG;ADYP;;ADIA;EACI,eAAA;ACDJ;;ADIA;EACI,mBAAA;ACDJ","file":"product.component.css"}

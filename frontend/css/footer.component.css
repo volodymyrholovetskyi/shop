@@ -1,5 +1,13 @@
 :host {
-  background: #999;
+  background: #292b31;
   padding: 20px;
-  border: 2px solid dimgray;
+  color: #aaa;
+}
+
+.footer-copy {
+  text-align: center;
+}
+
+.footer-manu {
+  margin-bottom: 15px;
 }/*# sourceMappingURL=footer.component.css.map */
