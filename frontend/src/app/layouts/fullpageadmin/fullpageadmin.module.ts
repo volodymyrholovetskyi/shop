@@ -6,11 +6,16 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AdminComponent } from 'src/app/modules/admin/admin.component';
 import { FullpageadminComponent } from './fullpageadmin.component';
 import { MaterialModule } from 'src/app/shared/material.module';
+import { AdminProductComponent } from 'src/app/modules/admin/admin-product/admin-product.component';
 
 
 
 @NgModule({
-  declarations: [FullpageadminComponent, AdminComponent],
+  declarations: [
+    FullpageadminComponent,
+    AdminComponent,
+    AdminProductComponent
+  ],
   imports: [
     CommonModule,
     RouterModule,

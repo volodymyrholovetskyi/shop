@@ -19,13 +19,17 @@ public class AdminProduct {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Long categoryId;
+//    private Long categoryId;
+
+    private String category;
     private String description;
-    private String fullDescription;
+
     private BigDecimal price;
-    @Enumerated(EnumType.STRING)
-    private AdminProductCurrency currency;
-    private String image;
-    private String slug;
+    private String currency;
+//    private String fullDescription;
+//    @Enumerated(EnumType.STRING)
+//    private AdminProductCurrency currency;
+//    private String image;
+//    private String slug;
 
 }

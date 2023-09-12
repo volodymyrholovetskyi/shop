@@ -16,25 +16,29 @@ public class AdminProductDTO {
     @Length(min = 4)
     private String name;
 
-    @NotNull
-    private Long categoryId;
+//    @NotNull
+////    private Long categoryId;
+
+    private String category;
+
+    private String currency;
 
     @NotBlank
     @Length(min = 4)
     private String description;
 
-    private String fullDescription;
+//    private String fullDescription;
 
     @NotNull
     @Min(0)
     private BigDecimal price;
 
-    private AdminProductCurrency currency;
+//    private AdminProductCurrency currency;
 
-    private String image;
-
-    @NotBlank
-    @Length(min = 4)
-    private String slug;
+//    private String image;
+//
+//    @NotBlank
+//    @Length(min = 4)
+//    private String slug;
 
 }

@@ -35,59 +35,60 @@ public class AdminProductController {
         return productService.getProducts(pageable);
     }
 
-    @GetMapping("/admin/products/{id}")
-    public AdminProduct getProduct(@PathVariable Long id) {
-        return productService.getProduct(id);
-    }
-
-    @PostMapping("/admin/products")
-    public AdminProduct createProduct(@RequestBody @Valid AdminProductDTO productDTO) {
-        System.out.println("Slug: " + productDTO.getSlug());
-        return productService.createProduct(mapAdminProduct(productDTO, EMPTY_ID));
-    }
-
-    @PutMapping("/admin/products/{id}")
-    public AdminProduct updateProduct(@RequestBody @Valid AdminProductDTO productDTO, @PathVariable Long id) {
-        return productService.updateProduct(mapAdminProduct(productDTO, id));
-    }
-
-    @DeleteMapping("/admin/products/{id}")
-    public void deleteProduct(@PathVariable Long id) {
-        productService.deleteProduct(id);
-    }
-
-    @PostMapping("/admin/products/upload-image")
-    public UploadResponse uploadImage(@RequestParam("file") MultipartFile multipartFile) {
-        String filename = multipartFile.getOriginalFilename();
-        try (InputStream inputStream = multipartFile.getInputStream()) {
-            String savedFileName = imageService.uploadImage(filename, inputStream);
-            return new UploadResponse(filename);
-
-        } catch (IOException e) {
-            throw new RuntimeException("Something went wrong while uploading the file", e);
-        }
-
-    }
-
-    @GetMapping("/data/productImage/{filename}")
-    public ResponseEntity<Resource> serveFiles(@PathVariable String filename) throws IOException {
-        Resource file = imageService.serveFiles(filename);
-        return ResponseEntity.ok()
-                .header(HttpHeaders.CONTENT_TYPE, Files.probeContentType(Path.of(filename)))
-                .body(file);
-    }
+//    @GetMapping("/admin/products/{id}")
+//    public AdminProduct getProduct(@PathVariable Long id) {
+//        return productService.getProduct(id);
+//    }
+//
+//    @PostMapping("/admin/products")
+//    public AdminProduct createProduct(@RequestBody @Valid AdminProductDTO productDTO) {
+//        System.out.println("Slug: " + productDTO.getSlug());
+//        return productService.createProduct(mapAdminProduct(productDTO, EMPTY_ID));
+//    }
+//
+//    @PutMapping("/admin/products/{id}")
+//    public AdminProduct updateProduct(@RequestBody @Valid AdminProductDTO productDTO, @PathVariable Long id) {
+//        return productService.updateProduct(mapAdminProduct(productDTO, id));
+//    }
+//
+//    @DeleteMapping("/admin/products/{id}")
+//    public void deleteProduct(@PathVariable Long id) {
+//        productService.deleteProduct(id);
+//    }
+//
+//    @PostMapping("/admin/products/upload-image")
+//    public UploadResponse uploadImage(@RequestParam("file") MultipartFile multipartFile) {
+//        String filename = multipartFile.getOriginalFilename();
+//        try (InputStream inputStream = multipartFile.getInputStream()) {
+//            String savedFileName = imageService.uploadImage(filename, inputStream);
+//            return new UploadResponse(filename);
+//
+//        } catch (IOException e) {
+//            throw new RuntimeException("Something went wrong while uploading the file", e);
+//        }
+//
+//    }
+//
+//    @GetMapping("/data/productImage/{filename}")
+//    public ResponseEntity<Resource> serveFiles(@PathVariable String filename) throws IOException {
+//        Resource file = imageService.serveFiles(filename);
+//        return ResponseEntity.ok()
+//                .header(HttpHeaders.CONTENT_TYPE, Files.probeContentType(Path.of(filename)))
+//                .body(file);
+//    }
 
     private AdminProduct mapAdminProduct(AdminProductDTO productDTO, Long id) {
         return AdminProduct.builder()
                 .id(id)
                 .name(productDTO.getName())
                 .description(productDTO.getDescription())
-                .fullDescription(productDTO.getFullDescription())
-                .categoryId(productDTO.getCategoryId())
+//                .fullDescription(productDTO.getFullDescription())
+//                .categoryId(productDTO.getCategoryId())
                 .price(productDTO.getPrice())
+                .category(productDTO.getCategory())
 //                .currency(productDTO.getCurrency())
-                .image(productDTO.getImage())
-                .slug(slugifySlug(productDTO.getSlug()))
+//                .image(productDTO.getImage())
+//                .slug(slugifySlug(productDTO.getSlug()))
                 .build();
     }
 
