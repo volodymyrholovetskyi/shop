@@ -35,21 +35,21 @@ public class AdminProductController {
         return productService.getProducts(pageable);
     }
 
-//    @GetMapping("/admin/products/{id}")
-//    public AdminProduct getProduct(@PathVariable Long id) {
-//        return productService.getProduct(id);
-//    }
-//
-//    @PostMapping("/admin/products")
-//    public AdminProduct createProduct(@RequestBody @Valid AdminProductDTO productDTO) {
+    @GetMapping("/admin/products/{id}")
+    public AdminProduct getProduct(@PathVariable Long id) {
+        return productService.getProduct(id);
+    }
+
+    @PostMapping("/admin/products")
+    public AdminProduct createProduct(@RequestBody @Valid AdminProductDTO productDTO) {
 //        System.out.println("Slug: " + productDTO.getSlug());
-//        return productService.createProduct(mapAdminProduct(productDTO, EMPTY_ID));
-//    }
-//
-//    @PutMapping("/admin/products/{id}")
-//    public AdminProduct updateProduct(@RequestBody @Valid AdminProductDTO productDTO, @PathVariable Long id) {
-//        return productService.updateProduct(mapAdminProduct(productDTO, id));
-//    }
+        return productService.createProduct(mapAdminProduct(productDTO, EMPTY_ID));
+    }
+
+    @PutMapping("/admin/products/{id}")
+    public AdminProduct updateProduct(@PathVariable Long id, @RequestBody @Valid AdminProductDTO productDTO) {
+        return productService.updateProduct(mapAdminProduct(productDTO, id));
+    }
 //
 //    @DeleteMapping("/admin/products/{id}")
 //    public void deleteProduct(@PathVariable Long id) {
@@ -86,7 +86,7 @@ public class AdminProductController {
 //                .categoryId(productDTO.getCategoryId())
                 .price(productDTO.getPrice())
                 .category(productDTO.getCategory())
-//                .currency(productDTO.getCurrency())
+                .currency(productDTO.getCurrency())
 //                .image(productDTO.getImage())
 //                .slug(slugifySlug(productDTO.getSlug()))
                 .build();

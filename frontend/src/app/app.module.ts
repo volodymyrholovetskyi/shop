@@ -9,10 +9,11 @@ import { FullpageadminModule } from './layouts/fullpageadmin/fullpageadmin.modul
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminProductComponent } from './modules/admin/admin-product/admin-product.component';
+import { AdminProductUpdateComponent } from './modules/admin/admin-product-update/admin-product-update.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

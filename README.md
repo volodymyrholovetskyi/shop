@@ -31,19 +31,23 @@ Online store for the sale and management of goods
 
 ## API Documentation:
 
-| Operation                | URL template                       |
-| ------------------------ | ---------------------------------- |
-| Get a list of products   | GET /products                      |
-| Get a list of categories | GET /admin/categories              |
-| Get a category by ID     | GET /admin/categories/{id}         |
-| Create a new category    | POST /admin/categories             |
-| Delete a category by ID  | DELETE /admin/categories/{id}      |
-| Get a list of products   | GET /admin/products                |
-| Get a category by ID     | GET /admin/products/{id}           |
-| Create a new product     | POST /admin/products               |
-| Upload a product image   | POST /admin/products/upload-image  |
-| Get a product image      | GET /admin/productImage/{filename} |
-| Delete a product by ID   | DELETE /admin/products             |
+| Operation                | URL template                          |
+| ------------------------ | ------------------------------------- |
+| Swagger UI               | http://loclahost:8080/swagger-ui.html |
+| OpenAPI  (springdoc)     | http://loclahost:8080/v3/api-docs     |
+| Get a list of products   | GET /products                         |
+| Get a list of categories | GET /admin/categories                 |
+| Get a category by ID     | GET /admin/categories/{id}            |
+| Create a new category    | POST /admin/categories                |
+| Delete a category by ID  | DELETE /admin/categories/{id}         |
+| Get a list of products   | GET /admin/products                   |
+| Get a category by ID     | GET /admin/products/{id}              |
+| Create a new product     | POST /admin/products                  |
+| Upload a product image   | POST /admin/products/upload-image     |
+| Get a product image      | GET /admin/productImage/{filename}    |
+| Delete a product by ID   | DELETE /admin/products                |
+
+## ![db_shop](C:\IT\JAVA\PORTFOLIO\Shop\db_shop.png)
 
 ## Technologies
 
@@ -52,6 +56,7 @@ Online store for the sale and management of goods
 * Spring Boot
 * Spring Security
 * Spring Data
+* Swagger
 * Liquibase
 * JUnit 5
 * AssertJ

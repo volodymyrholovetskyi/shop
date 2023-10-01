@@ -12,6 +12,7 @@ import java.util.List;
 public class AdminCategoryService {
 
     private final AdminCategoryRepository adminCategoryRepository;
+
     public List<AdminCategory> getCategories() {
         return adminCategoryRepository.findAll();
     }

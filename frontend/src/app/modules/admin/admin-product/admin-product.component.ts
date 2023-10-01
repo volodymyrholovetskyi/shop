@@ -12,22 +12,27 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class AdminProductComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  displayedColumns: string[] = ['id', 'name', 'price'];
+  displayedColumns: string[] = ['id', 'name', 'price', 'actions'];
   totalElements: number = 0;
   data: AdminProduct[] = [];
 
-  constructor(private adminProductService: AdminProductService) { }
-  
+  constructor(private adminProductService: AdminProductService) {}
+
   ngAfterViewInit(): void {
-    this.paginator.page.pipe(
-      startWith({}),
-      switchMap(() => {
-        return this.adminProductService.getProducts(this.paginator.pageIndex, this.paginator.pageSize);
-      }),
-      map(data => {
-        this.totalElements = data.totalElements;
-        return data.content;
-      })
-    ).subscribe(data => this.data = data);
+    this.paginator.page
+      .pipe(
+        startWith({}),
+        switchMap(() => {
+          return this.adminProductService.getProducts(
+            this.paginator.pageIndex,
+            this.paginator.pageSize
+          );
+        }),
+        map((data) => {
+          this.totalElements = data.totalElements;
+          return data.content;
+        })
+      )
+      .subscribe((data) => (this.data = data));
   }
 }
